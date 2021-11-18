@@ -7,9 +7,9 @@ SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 #Netflix策略组自动控制
 NetflixController = script-name=NetflixController, update-interval=600
 #Disney+策略组自动控制
-DisneySelect = script-name=DisneySelecter, update-interval=3600
+DisneySelect = script-name=DisneySelecter, update-interval=600
 #机场信息
-Sub_info = script-name=Sub_info,update-interval = 43200
+Sub_info = script-name=Sub_info,update-interval = 600
 #流量统计
 TrafficStatistics = script-name=TrafficStatistics,update-interval=1
 #刷新DNS
