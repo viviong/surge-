@@ -17,13 +17,13 @@ flushDNS = script-name=flushDNS,update-interval=-1
 #网络详情
 NET_info = script-name=NET_info,update-interval=1
 #策略组面板 可重复配置 注意修改相应字段
-groupPanel= script-name=groupPanel,update-interval=5
-groupPane2= script-name=groupPane2,update-interval=5
-groupPane3= script-name=groupPane3,update-interval=5
-groupPane4= script-name=groupPane4,update-interval=5
-groupPane5= script-name=groupPane5,update-interval=5
-groupPane6= script-name=groupPane6,update-interval=5
-groupPane7= script-name=groupPane7,update-interval=5
+groupPanel = script-name=groupPanel,update-interval=5
+groupPane2 = script-name=groupPane2,update-interval=5
+groupPane3 = script-name=groupPane3,update-interval=5
+groupPane4 = script-name=groupPane4,update-interval=5
+groupPane5 = script-name=groupPane5,update-interval=5
+groupPane6 = script-name=groupPane6,update-interval=5
+groupPane7 = script-name=groupPane7,update-interval=5
 
 [Script]
 #附带重载配置,Surge Pro标题,可显示启动时间,点击刷新为重载配置
