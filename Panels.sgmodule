@@ -39,7 +39,7 @@ NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fapi.v2ray.asia%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D6a53f9ead802be36a933a75292811f8a%26flag%3Dsurge&reset_day=7&title=奈飞&icon=opticaldisc&color=#5AC8FA
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fapi.v2ray.asia%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D6a53f9ead802be36a933a75292811f8a&reset_day=7&title=奈飞&icon=opticaldisc&color=#5AC8FA
 #netflix策略组控制
 #必须更改的字段 netflixGroup 填写你Netflix策略组名称
 #详情请阅读：https://github.com/fishingworld/something/blob/main/NetflixSelect/README.md
