@@ -5,7 +5,7 @@
 #Surge Pro标题,可显示启动时间,点击刷新为重载配置
 SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 #Netflix策略组自动控制
-NetflixSelect = script-name=NetflixSelect, update-interval=3600
+NetflixController = script-name=NetflixController, update-interval=600
 #Disney+策略组自动控制
 DisneySelect = script-name=DisneySelecter, update-interval=3600
 #机场信息
@@ -39,14 +39,15 @@ NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fapi.v2ray.asia%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D6a53f9ead802be36a933a75292811f8a%26flag%3Dsurge&reset_day=7&title=机场&icon=opticaldisc&color=#5AC8FA
-
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fapi.v2ray.asia%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D6a53f9ead802be36a933a75292811f8a%26flag%3Dsurge&reset_day=1&title=奈飞&icon=opticaldisc&color=#5AC8FA
 #netflix策略组控制
 #必须更改的字段 netflixGroup 填写你Netflix策略组名称
 #详情请阅读：https://github.com/fishingworld/something/blob/main/NetflixSelect/README.md
-NetflixSelect = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/nf_autoselect.js, argument=icon1=checkmark.circle&color1=#55ba94&icon2=checkmark.circle.trianglebadge.exclamationmark&color2=#9a9ced&icon3=hand.raised.circle&color3=#ea5532&netflixGroup=奈飞
-NetflixChecker = type=cron,cronexp=5 4 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/nf_autocheck.js ,script-update-interval=0,control-api=1
-#disney+策略组控制
+#应该修改的字段 netflixGroup
+NetflixController = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixcontroller.js, timeout=3600, argument=icon1=checkmark.circle&color1=55ba94&icon2=checkmark.circle.trianglebadge.exclamationmark&color2=#9a9ced&icon3=hand.raised.circle&color3=#ea5532&netflixGroup=奈飞
+NetflixChecker = type=cron,cronexp=10 * * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixchecker.js,script-update-interval=86400,control-api=1
+#捷径执行
+NetflixShortcut = type=cron,cronexp=5 * 31 1 2000,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixshortcut.js,script-update-interval=86400,control-api=1#disney+策略组控制
 #应当修改的字段 disneyGroup Disney+的策略组名称
 #详情请阅读：https://github.com/fishingworld/something/tree/main/DisneySelect
 DisneySelecter = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disney_selecter.js, argument=icon1=checkmark.circle&color1=#55ba94&icon2=cursorarrow.click.badge.clock&color2=#ed6c84&icon3=xmark.shield&color3=#AF52DE&disneyGroup=奈飞
